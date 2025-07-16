@@ -1,10 +1,10 @@
 import graphene
-import CRMQuery  # Assuming CRMQuery is defined in the alx_backend_graphql_crm module
+from crm.schema import Mutation as CRMMutation
 
 class Query(CRMQuery, graphene.ObjectType):
-    hello = graphene.String()
+    pass
 
-    def resolve_hello(root, info):
-        return "Hello, GraphQL!"
+class Mutation(CRMMutation, graphene.ObjectType):
+    pass
 
-schema = graphene.Schema(query=Query)
+schema = graphene.Schema(query=Query, mutation=Mutation)
