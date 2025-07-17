@@ -7,6 +7,12 @@ from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from .models import Customer, Product, Order
 
 # --- Types ---
+class Query(graphene.ObjectType):
+    all_customers = graphene.List(CustomerType)
+
+    def resolve_all_customers(self, info):
+        return Customer.objects.all()
+
 class CustomerType(DjangoObjectType):
     class Meta:
         model = Customer
