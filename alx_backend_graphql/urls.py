@@ -1,5 +1,5 @@
 """
-URL configuration for alx_backend_graphql_crm project.
+URL configuration for alx_backend_graphql project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
